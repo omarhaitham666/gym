@@ -213,7 +213,8 @@ span {
 }
 
 .image-one {
-  overflow: hidden;
+    overflow: hidden;
+    border-radius: 30px;
 }
 
 .class-one {
