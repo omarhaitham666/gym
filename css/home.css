@@ -1,0 +1,471 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  text-transform: capitalize;
+}
+
+*::selection {
+  background-color: var(--theme-third-color);
+  color: var(--theme-base-color);
+}
+
+html[theme="light"] {
+  --theme-base-color: white;
+  --theme-second-color: black;
+  --theme-third-color: #e5ba03;
+  --theme-forth-color: rgb(158, 153, 153);
+  --theme-classes-color: #efe6e6;
+  --theme-bg-image-color: rgba(255, 255, 255, 0.9);
+  --theme-p-color: rgb(208, 196, 196);
+}
+
+.home-section {
+  display: flex;
+  background-color: var(--theme-second-color);
+  color: var(--theme-base-color);
+  justify-content: space-around;
+  align-items: center;
+  overflow-x: hidden;
+  height: 100vh;
+}
+.home-section img {
+  width: 600px;
+  animation: swap alternate 1s;
+  margin-top: 50px;
+}
+.layer {
+  animation: move 1s alternate;
+}
+.layer span {
+  color: var(--theme-third-color);
+}
+.layer h1 {
+  font-size: 100px;
+}
+.layer i {
+  rotate: calc(-45deg);
+  font-size: 38px;
+}
+.layer a {
+  border: 1px solid var(--theme-base-color);
+  padding: 8px;
+  border-radius: 10px;
+  position: relative;
+  top: 30px;
+  font-size: 18px;
+  text-decoration: none;
+  color: white;
+}
+.layer a:hover {
+  background-color: var(--theme-third-color);
+}
+.layer p {
+  font-size: 18px;
+}
+
+@keyframes swap {
+  0% {
+    transform: translateX(600px);
+  }
+
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes move {
+  0% {
+    transform: translateY(-300px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+.images {
+    display: flex;
+    width: 100%;
+    position: relative;
+    bottom: 15px;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px;
+}
+.images img {
+  width: 25%;
+}
+.view-home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.data-view h2,
+span {
+  color: var(--theme-third-color);
+}
+.data-view h1 {
+  font-size: 50px;
+  padding: 20px 0;
+}
+.data-view p {
+  font-size: 18px;
+}
+.data-view a {
+  background-color: var(--theme-third-color);
+  padding: 10px 28px;
+  border: 1px solid var(--theme-third-color);
+  border-radius: 20px;
+  position: relative;
+  top: 30px;
+  font-size: 20px;
+  text-decoration: none;
+  color: white;
+}
+.data-view a:hover {
+  background-color: var(--theme-second-color);
+}
+.view-home img {
+  animation: move 1s alternate;
+}
+.first-image {
+  position: relative;
+}
+.data-first-image {
+  position: absolute;
+  top: 30%;
+  color: var(--theme-base-color);
+  left: 10%;
+}
+.first-image img {
+  width: 375px;
+}
+
+.data-first-image h2 {
+  font-size: 28px;
+  position: relative;
+  top: 10px;
+}
+.data-first-image h2::after {
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 2px;
+  background-color: var(--theme-base-color);
+  top: 110%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+}
+
+.bg {
+  background-image: url(./../images/bg.webp);
+  background-repeat: no-repeat;
+  color: var(--theme-base-color);
+  background-position: center;
+  background-size: cover;
+  width: 60%;
+  height: 420px;
+  position: relative;
+  left: 10%;
+}
+
+.content {
+  display: flex;
+  gap: 150px;
+  padding: 30px 100px;
+}
+.content h2 {
+  font-size: 28px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.content i {
+  font-size: 28px;
+  rotate: calc(45deg);
+}
+
+.data-flex {
+  display: flex;
+}
+.person-image img {
+  position: relative;
+  left: 155px;
+}
+.gym-classes h2 {
+  text-align: center;
+  font-size: 38px;
+  padding-bottom: 10px;
+}
+.gym-classes p {
+  text-align: center;
+  font-size: 18px;
+  line-height: 25px;
+  color: var(--theme-forth-color);
+  padding-bottom: 50px;
+}
+
+.image-one img {
+  transition: all 0.5s ease-in-out;
+}
+
+.first-image:hover .image-one img {
+  transform: scale(1.2);
+}
+
+.image-one {
+  overflow: hidden;
+}
+
+.class-one {
+  background-color: var(--theme-classes-color);
+  width: 300px;
+  height: 350px;
+  position: relative;
+  margin: 70px 0;
+}
+.class-one h2 {
+  rotate: calc(270deg);
+  position: relative;
+  top: 45%;
+  left: 40%;
+  font-size: 22px;
+  text-transform: uppercase;
+}
+.class-one h3 {
+  position: relative;
+  top: 80%;
+  left: 5%;
+  color: var(--theme-forth-color);
+}
+.class-one img {
+  position: absolute;
+  bottom: 12%;
+  right: 17%;
+  height: 400px;
+}
+.classes-in-gym {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+}
+.class-one:hover h2 {
+  color: var(--theme-third-color);
+  transition: all 0.2s ease-in-out;
+}
+
+.class-one:hover img {
+  transform: scale(1.1);
+}
+
+.section-classes-gym {
+  overflow: hidden;
+}
+
+.work-out img {
+  width: 500px;
+  height: 400px;
+}
+
+.work-out {
+  position: relative;
+}
+.classical-work-out {
+  display: flex;
+  justify-content: center;
+}
+
+.dambule-images {
+  height: 370px;
+  background-image: url(./../images/dumbels.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  margin-top: 15px;
+}
+
+.images-one {
+  display: flex;
+  width: 850px;
+  height: 185px;
+  justify-content: space-evenly;
+  background-color: var(--theme-bg-image-color);
+  align-items: center;
+}
+.images-one img {
+  width: 250px;
+  height: auto;
+}
+.first-class {
+  display: flex;
+  align-items: end;
+}
+.first-class h3 {
+  color: var(--theme-forth-color);
+  font-size: 38px;
+  padding-left: 10px;
+}
+
+.data-work-out {
+  position: absolute;
+  bottom: 20%;
+  color: var(--theme-forth-color);
+  left: 10%;
+}
+.data-work-out h1 {
+  font-size: 58px;
+}
+.data-work-out p {
+  font-size: 17px;
+  padding: 26px 0;
+}
+.data-work-out a {
+  color: var(--theme-base-color);
+  font-size: 24px;
+  position: relative;
+}
+.data-work-out a:hover {
+  color: var(--theme-third-color);
+}
+.data-work-out a::after {
+  content: "";
+  position: absolute;
+  border: 1px solid var(--theme-forth-color);
+  background-color: var(--theme-base-color);
+  width: 140px;
+  right: 50%;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.fitness-gallery {
+  margin-top: 100px;
+  display: flex;
+  margin-left: 150px;
+}
+.fitness-gallery button {
+  position: absolute;
+  left: 85%;
+  padding: 15px 40px;
+  background-color: var(--theme-base-color);
+  border: 1px solid var(--theme-third-color);
+  border-radius: 20px;
+  font-size: 15px;
+  text-transform: uppercase;
+  top: 45%;
+}
+.parent-fitness {
+  position: relative;
+}
+.fitness-gallery h3 {
+  color: var(--theme-third-color);
+  font-size: 20px;
+}
+.fitness-gallery h2 {
+  font-size: 38px;
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+
+.fitness-gallery button:hover {
+  color: var(--theme-base-color);
+  background-color: var(--theme-third-color);
+  transition: all 0.2s ease-in-out;
+}
+.flex-images {
+  display: flex;
+  width: 100%;
+  gap: 20px;
+  overflow-x: hidden;
+  margin-bottom: 50px;
+}
+.flex-images img {
+  width: 25%;
+}
+.heading-cards {
+  padding-top: 50px;
+  text-align: center;
+}
+.heading-cards h2 {
+  font-size: 38px;
+  padding-bottom: 20px;
+}
+.heading-cards p {
+  color: var(--theme-p-color);
+  font-size: 18px;
+  margin-bottom: 50px;
+}
+.data-first-card {
+  background-color: var(--theme-classes-color);
+  height: 100px;
+}
+.first-card {
+  width: 18%;
+  position: relative;
+}
+.first-card img {
+  width: 100%;
+}
+.data-first-card {
+  position: absolute;
+  width: 100%;
+  top: 80%;
+  text-align: center;
+  height: 120px;
+  overflow: hidden;
+}
+.cards {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 50px;
+  margin-bottom: 100px;
+}
+.data-first-card h2 {
+  padding: 10px 0;
+}
+.data-first-card h3 {
+  font-size: 16px;
+  color: var(--theme-p-color);
+}
+.data-first-card ul {
+  list-style: none;
+  display: flex;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  transform: translateX(-25%);
+  top: 10%;
+  gap: 18px;
+}
+.data-first-card p {
+  padding-top: 20px;
+}
+.data-first-card h2:hover {
+  color: var(--theme-third-color);
+  transition: all 0.2s ease-in-out;
+}
+.data-first-card i:hover {
+  background-color: var(--theme-third-color);
+  color: var(--theme-base-color);
+  transition: all 0.2s ease-in-out;
+  transform: scale(1.2);
+}
+.data-first-card i {
+  border-radius: 8px;
+  border: 1px solid var(--theme-p-color);
+  padding: 3px;
+  padding-right: 18px;
+  background-color: var(--theme-p-color);
+}
+.first-card:hover .data-first-card {
+  transform: translateY(-50px);
+  height: 170px;
+  transition: all 0.2s ease-in-out;
+}
+.data-first-card p {
+  position: relative;
+  top: 20px;
+  font-size: 22px;
+  color: var(--theme-third-color);
+}
